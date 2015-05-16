@@ -7,6 +7,7 @@ public class BattleData : Photon.MonoBehaviour {
 	{
 		Play,
 		EatPowerFood,
+		Grabbed,
 	}
 
 	private Battle battle;
@@ -41,7 +42,6 @@ public class BattleData : Photon.MonoBehaviour {
 			targets = PhotonTargets.Others;
 			break;
 		}
-
 		photonView.RPC("ReceiveState", targets, (int)state, id);
 	}
 	
@@ -57,6 +57,9 @@ public class BattleData : Photon.MonoBehaviour {
             break;
 		case State.EatPowerFood:
 			battle.Weaken(id);
+			break;	
+		case State.Grabbed:
+			battle.Grab(id);
 			break;
         }
     }

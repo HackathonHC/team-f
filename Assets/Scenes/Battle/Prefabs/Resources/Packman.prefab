@@ -47,7 +47,7 @@ GameObject:
   - 58: {fileID: 5878362}
   m_Layer: 8
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Packman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33aa3d04585f74ab0b695700a96d5f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   powerTime: 0
   IntervalWhenAte: 10
 --- !u!114 &11406230

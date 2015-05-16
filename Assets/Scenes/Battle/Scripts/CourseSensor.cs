@@ -93,6 +93,12 @@ public class CourseSensor : MonoBehaviour {
 				parent.GetComponent<Character>().hitCourse(myPosition,false);
 			}
 			break;
+		default:
+			if (tag == Monster.Tag && c.tag == Packman.Tag)
+			{
+				Battle.instance.Hit(c.GetComponentInParent<Packman>());
+			}
+			break;
 		}
   }
   void OnTriggerExit2D(Collider2D c) {

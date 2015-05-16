@@ -4,14 +4,16 @@ using System.Collections;
 public class Packman : Character {
 	private SpriteRenderer _renderer;
 
-	private int _id;
+	public int id;
 	public float powerTime = 0;
 	public float IntervalWhenAte = 10;
+
+	public const string Tag = "Packman";
 
 	void Awake()
 	{
 		photonView.observed = this;
-		_id = PhotonNetwork.playerList.Length - 1;
+		id = PhotonNetwork.playerList.Length - 1;
 		_renderer = GetComponent<SpriteRenderer>();
 		_renderer.sprite = Resources.Load<Sprite>(GetSpriteName());
 	}
@@ -20,6 +22,8 @@ public class Packman : Character {
 	void Start () {
 	
 	}
+
+	public bool isPower { get { return powerTime > 0 && Time.time - powerTime < IntervalWhenAte; } } 
 	
 	// Update is called once per frame
 	void Update () {
@@ -53,7 +57,7 @@ public class Packman : Character {
 
 	string GetSpriteName()
 	{
-		return string.Format("Packman{0}", _id);
+		return string.Format("Packman{0}", id);
 	}
 
 	void OnTriggerEnter2D(Collider2D c)

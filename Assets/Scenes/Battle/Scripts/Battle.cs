@@ -15,7 +15,7 @@ public class Battle : MonoBehaviour {
 	{
 		Standby,	// おまちください・・・
 		Play,
-		Dead,		// 食べられた
+		Grabbed,		// 食べられた
 	}
 
 	public class Data
@@ -96,6 +96,11 @@ public class Battle : MonoBehaviour {
 	const float Speed = 1.25f;
 	void Update()
 	{
+		if (!canMove)
+		{
+			return;
+		}
+
 		if (Input.GetKey(KeyCode.RightArrow))
 	    {
 			character.transform.position += Speed * Vector3.right * Time.deltaTime;
@@ -122,6 +127,7 @@ public class Battle : MonoBehaviour {
 		}
 		_startButton.SetActive(false);
 		_waitingLabel.SetActive(false);
+		data.mode = Mode.Play;
     }
 
 	public void Weaken(int id)
@@ -129,4 +135,31 @@ public class Battle : MonoBehaviour {
 		_powerPackmans.Add(id);
 	}
 
+	public void Hit(Packman packman)
+	{
+		if (PhotonNetwork.isMasterClient)
+		{
+			// TODO:  ちゃんとしたやられた処理
+			if (packman.isPower)
+			{
+				PhotonView.Destroy(character.gameObject);
+	        }
+			else
+			{
+				battleData.SendState(BattleData.State.Grabbed, packman.id);
+			}
+		}
+	}
+
+	public void Grab(int id)
+	{
+		Packman packman = character as Packman;
+		if (packman.id == id)
+		{
+			packman.transform.localPosition = Vector3.zero;
+			data.mode = Mode.Grabbed;
+		}
+	}
+
+	public bool canMove { get { return data.mode == Mode.Play; } }
 }

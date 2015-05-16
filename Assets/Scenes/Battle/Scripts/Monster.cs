@@ -7,6 +7,8 @@ public class Monster : Character {
 
 	private SpriteRenderer _renderer;
 
+	public const string Tag = "Monster";
+
 	void Awake()
 	{
 		instance = this;
