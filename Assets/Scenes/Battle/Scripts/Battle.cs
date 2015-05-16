@@ -75,21 +75,27 @@ public class Battle : MonoBehaviour {
 		RoomOptions roomOptions = new RoomOptions() { isVisible = false, maxPlayers = 5 };
 		PhotonNetwork.JoinOrCreateRoom("team-f", roomOptions, TypedLobby.Default);
 	}
-	
+
+	readonly static Vector3[] MonsterPositions = new Vector3[] { new Vector3(3.4f, -3.9f, 0), new Vector3(-3.4f, -3.9f, 0), new Vector3(-3.4f, 3.6f, 0), new Vector3(3.4f, 3.6f, 0) };
+	readonly static Vector3 PackmanPosition = new Vector3(0, 0.95f, 0);
 	void OnJoinedRoom()
 	{
+		Vector3 startPosition;
+
 		if (PhotonNetwork.isMasterClient)
 		{
 			data.playerType = PlayerType.Monster;
 			_startButton.SetActive(true);
+			startPosition = MonsterPositions[Random.Range(0, MonsterPositions.Length)];
 		}
 		else
 		{
 			data.playerType = PlayerType.Packman;
+			startPosition = PackmanPosition;
 		}
 
 		battleData = PhotonNetwork.Instantiate("BattleData", Vector3.zero, Quaternion.identity, 0).GetComponent<BattleData>();
-		GameObject g = PhotonNetwork.Instantiate(data.GetResourceName(), new Vector3(Random.Range(-3, 3), Random.Range(-3, 3), 0), Quaternion.identity, 0);
+		GameObject g = PhotonNetwork.Instantiate(data.GetResourceName(), startPosition, Quaternion.identity, 0);
 		character = g.GetComponent<Character>();
 	}
 
