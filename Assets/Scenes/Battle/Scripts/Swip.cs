@@ -8,7 +8,7 @@ public class Swip : MonoBehaviour {
 	
 	public float validityFlickTime = 0.5f;
 	public float validityFlickMinDistance = 30.0f;
-	public float validityFlickMaxDistance = 300.0f;
+	public float validityFlickMaxDistance = 3000.0f;
 	public int validityFlickDegRange = 20;
 	
 	//public bool enabledOnTouch = true;
@@ -20,6 +20,8 @@ public class Swip : MonoBehaviour {
 	private Vector3 touchPosition;
 	public GameObject target;
 
+	private Vector3 touchPos;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -28,10 +30,17 @@ public class Swip : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(target){
-			//if (Input.GetMouseButtonDown(0)) Down();
-			//if (Input.GetMouseButtonUp(0)) Up();
-			if(Input.GetKeyDown (KeyCode.Mouse0)) Down();
-			if(Input.GetKeyUp (KeyCode.Mouse0)) Up();
+			if(SystemInfo.operatingSystem.Contains("Android") || SystemInfo.operatingSystem.Contains("iPhone")){
+				if(Input.touchCount > 0){
+					Touch t = Input.GetTouch(0);
+					touchPos = t.position;
+					if (t.phase == TouchPhase.Began) Down();
+					if (t.phase == TouchPhase.Ended) Up();
+				}
+			} else {
+				if (Input.GetMouseButtonDown(0)) Down();
+				if (Input.GetMouseButtonUp(0)) Up();
+			}
 		}
 	}
 
@@ -42,8 +51,11 @@ public class Swip : MonoBehaviour {
 	}
 
 	void Down() {
-		touchPosition = Input.mousePosition;
-		//touchPosition = Input.GetTouch(0).position;
+		if(SystemInfo.operatingSystem.Contains("Android") || SystemInfo.operatingSystem.Contains("iPhone")){
+			touchPosition = touchPos;
+		} else {
+			touchPosition = Input.mousePosition;
+		}
 		
 		touchTime = Time.time;
 		isTouch = true;
@@ -51,10 +63,13 @@ public class Swip : MonoBehaviour {
 	
 	void Up() {
 		if (!isTouch) return;
-		
-		Vector3 touchEndPosition = Input.mousePosition;
-		//Vector3 touchEndPosition = Input.GetTouch(0).position;
-		
+		Vector3 touchEndPosition;
+		if(SystemInfo.operatingSystem.Contains("Android") || SystemInfo.operatingSystem.Contains("iPhone")){
+			touchEndPosition = touchPos;
+
+		} else {
+			touchEndPosition = Input.mousePosition;
+		}
 		float deltaTime = Time.time - touchTime;
 		float distance = Vector3.Distance(touchPosition, touchEndPosition);
 		int deg = getDeg(touchPosition, touchEndPosition);
@@ -99,7 +114,6 @@ public class Swip : MonoBehaviour {
 	
 	bool ValidateFlick(float deltaTime, float distance) {
 		if (validityFlickTime < deltaTime) return false;
-		
 		return (validityFlickMinDistance < distance && distance < validityFlickMaxDistance);
 	}
 	
