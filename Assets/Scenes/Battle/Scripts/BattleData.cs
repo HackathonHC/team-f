@@ -6,6 +6,7 @@ public class BattleData : Photon.MonoBehaviour {
 	public enum State
 	{
 		Play,
+		EatPowerFood,
 	}
 
 	private Battle battle;
@@ -27,21 +28,36 @@ public class BattleData : Photon.MonoBehaviour {
 		}
 	}
 
-	public void SendState(State state)
+	public void SendState(State state, int id=-1)
 	{
-		photonView.RPC("ReceiveState", PhotonTargets.Others, (int)state);
+		PhotonTargets targets;
+
+		switch (state)
+		{
+		case State.EatPowerFood:
+			targets = PhotonTargets.MasterClient;
+			break;
+		default:
+			targets = PhotonTargets.Others;
+			break;
+		}
+
+		photonView.RPC("ReceiveState", targets, (int)state, id);
 	}
 	
 	[RPC] 
-	void ReceiveState(int value)
+	void ReceiveState(int nState, int id)
 	{
 		print ("ReceiveState");
-		State state = (State)value;
+		State state = (State)nState;
 		switch (state)
 		{
 		case State.Play:
 			battle.Play();
             break;
+		case State.EatPowerFood:
+			battle.Weaken(id);
+			break;
         }
     }
 }

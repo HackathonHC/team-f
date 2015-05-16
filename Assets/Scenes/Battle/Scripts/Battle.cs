@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 
 public class Battle : MonoBehaviour {
@@ -38,6 +39,8 @@ public class Battle : MonoBehaviour {
 
 	private GameObject _startButton;
 	private GameObject _waitingLabel;
+
+	private HashSet<int> _powerPackmans = new HashSet<int>();
 
 	void Awake() 
 	{
@@ -120,5 +123,10 @@ public class Battle : MonoBehaviour {
 		_startButton.SetActive(false);
 		_waitingLabel.SetActive(false);
     }
+
+	public void Weaken(int id)
+	{
+		_powerPackmans.Add(id);
+	}
 
 }
