@@ -20,7 +20,9 @@ public class Packman : Character {
 
 	// Use this for initialization
 	void Start () {
-	
+		if (photonView.isMine) {
+			GameObject.Find("Swip").GetComponent<Swip>().setTarget(this.gameObject);
+		}
 	}
 
 	public bool isPower { get { return powerTime > 0 && Time.time - powerTime < IntervalWhenAte; } } 
