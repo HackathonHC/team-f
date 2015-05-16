@@ -3,10 +3,23 @@ using System.Collections;
 
 public class Monster : Character {
 
+	public static Monster instance { get; private set; }
+
+	private SpriteRenderer _renderer;
+
+	void Awake()
+	{
+		instance = this;
+		_renderer = GetComponent<SpriteRenderer>();
+	}
+
 	// Use this for initialization
 	void Start () {
 		if (photonView.isMine) {
 			GameObject.Find("Swip").GetComponent<Swip>().setTarget(this.gameObject);
+		}
+		else {
+			Hide();
 		}
 	}
 	
@@ -16,4 +29,14 @@ public class Monster : Character {
 			Move();
 		}
 	}
+
+	void Show()
+	{
+		_renderer.enabled = true;
+	}
+
+	void Hide()
+	{
+		_renderer.enabled = false;
+    }
 }

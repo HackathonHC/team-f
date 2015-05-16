@@ -57,7 +57,7 @@ public class Battle : MonoBehaviour {
 
 	void JoinLobby()
 	{
-		PhotonNetwork.ConnectUsingSettings("2.0");
+		PhotonNetwork.ConnectUsingSettings("3.0");
 		PhotonNetwork.sendRate = 60;
 		PhotonNetwork.sendRateOnSerialize = 60;
 	}
@@ -90,24 +90,24 @@ public class Battle : MonoBehaviour {
 		character = g.GetComponent<Character>();
 	}
 
-	const float Speed = 0.25f;
+	const float Speed = 1.25f;
 	void Update()
 	{
 		if (Input.GetKey(KeyCode.RightArrow))
 	    {
-			character.transform.position += Speed * Vector3.right;
+			character.transform.position += Speed * Vector3.right * Time.deltaTime;
 		}
 		else if (Input.GetKey(KeyCode.LeftArrow))
 		{
-			character.transform.position -= Speed * Vector3.right;
+			character.transform.position -= Speed * Vector3.right * Time.deltaTime;
 		}
 		else if (Input.GetKey(KeyCode.UpArrow))
 		{
-			character.transform.position += Speed * Vector3.up;
+			character.transform.position += Speed * Vector3.up * Time.deltaTime;
 		}
 		else if (Input.GetKey(KeyCode.DownArrow))
 		{
-			character.transform.position -= Speed * Vector3.up;
+			character.transform.position -= Speed * Vector3.up * Time.deltaTime;
 		}
 	}
 
