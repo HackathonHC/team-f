@@ -114,7 +114,7 @@ public class Swip : MonoBehaviour {
 	
 	bool ValidateFlick(float deltaTime, float distance) {
 		if (validityFlickTime < deltaTime) return false;
-		return (validityFlickMinDistance < distance && distance < validityFlickMaxDistance);
+		return (validityFlickMinDistance < distance/* && distance < validityFlickMaxDistance*/);
 	}
 	
 	bool ValidateFlickDeg(int ruleDeg, int deg) {
