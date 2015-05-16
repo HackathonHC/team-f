@@ -27,4 +27,17 @@ public class Packman : Character {
 	{
 		return string.Format("Packman{0}", _id);
 	}
+
+	void OnTriggerEnter2D(Collider2D c)
+	{
+		print ("Food");
+		if (c.tag == Food.Tag)
+		{
+			c.GetComponent<Food>().Hide();
+			if (photonView.isMine)
+			{
+				// TODO: ADD score etc...
+			}
+		}
+	}
 }
