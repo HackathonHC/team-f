@@ -99,7 +99,7 @@ GameObject:
   - 61: {fileID: 23747168}
   m_Layer: 9
   m_Name: Course1_12
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +267,7 @@ GameObject:
   - 60: {fileID: 132503886}
   m_Layer: 9
   m_Name: Course1_9
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +343,7 @@ GameObject:
   - 60: {fileID: 144773592}
   m_Layer: 9
   m_Name: Course1_14
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,7 +419,7 @@ GameObject:
   - 60: {fileID: 152301725}
   m_Layer: 9
   m_Name: Course1_32
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,7 +695,7 @@ GameObject:
   - 60: {fileID: 289428458}
   m_Layer: 9
   m_Name: Course1_36
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -876,7 +876,7 @@ GameObject:
   - 61: {fileID: 363925804}
   m_Layer: 9
   m_Name: Course1_5
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,7 +944,7 @@ GameObject:
   - 60: {fileID: 450837828}
   m_Layer: 9
   m_Name: Course1_34
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1340,7 +1340,7 @@ GameObject:
   - 61: {fileID: 603129921}
   m_Layer: 9
   m_Name: Course1_11
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1497,7 +1497,7 @@ GameObject:
   - 61: {fileID: 659141171}
   m_Layer: 9
   m_Name: Course1_2
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1565,7 +1565,7 @@ GameObject:
   - 60: {fileID: 715822651}
   m_Layer: 9
   m_Name: Course1_29
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1743,7 +1743,7 @@ GameObject:
   - 61: {fileID: 904247941}
   m_Layer: 9
   m_Name: Course1_17
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1861,7 +1861,7 @@ GameObject:
   - 60: {fileID: 919336585}
   m_Layer: 9
   m_Name: Course1_30
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1937,7 +1937,7 @@ GameObject:
   - 61: {fileID: 960495691}
   m_Layer: 9
   m_Name: Course1_24
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2105,7 +2105,7 @@ GameObject:
   - 60: {fileID: 1023394970}
   m_Layer: 9
   m_Name: Course1_6
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2297,7 +2297,7 @@ GameObject:
   - 60: {fileID: 1125925789}
   m_Layer: 9
   m_Name: Course1_31
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2457,7 +2457,7 @@ GameObject:
   - 61: {fileID: 1242319114}
   m_Layer: 9
   m_Name: Course1_27
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2579,7 +2579,7 @@ GameObject:
   - 61: {fileID: 1265761664}
   m_Layer: 9
   m_Name: Course1_15
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2697,7 +2697,7 @@ GameObject:
   - 61: {fileID: 1309849024}
   m_Layer: 9
   m_Name: Course1_20
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2765,7 +2765,7 @@ GameObject:
   - 61: {fileID: 1311313863}
   m_Layer: 9
   m_Name: Course1_3
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2833,7 +2833,7 @@ GameObject:
   - 60: {fileID: 1312439904}
   m_Layer: 9
   m_Name: Course1_37
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2909,7 +2909,7 @@ GameObject:
   - 61: {fileID: 1322863546}
   m_Layer: 9
   m_Name: Course1_4
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2977,7 +2977,7 @@ GameObject:
   - 61: {fileID: 1333495114}
   m_Layer: 9
   m_Name: Course1_19
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3095,7 +3095,7 @@ GameObject:
   - 61: {fileID: 1418643746}
   m_Layer: 9
   m_Name: Course1_8
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3163,7 +3163,7 @@ GameObject:
   - 60: {fileID: 1428022349}
   m_Layer: 9
   m_Name: Course1_23
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3243,7 +3243,7 @@ GameObject:
   - 60: {fileID: 1459914625}
   m_Layer: 9
   m_Name: Course1_21
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3317,7 +3317,7 @@ GameObject:
   - 60: {fileID: 1534308240}
   m_Layer: 9
   m_Name: Course1_38
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3395,7 +3395,7 @@ GameObject:
   - 60: {fileID: 1551324119}
   m_Layer: 9
   m_Name: Course1_7
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3471,7 +3471,7 @@ GameObject:
   - 60: {fileID: 1556831892}
   m_Layer: 9
   m_Name: Course1_35
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3545,7 +3545,7 @@ GameObject:
   - 60: {fileID: 1558067592}
   m_Layer: 9
   m_Name: Course1_26
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3621,7 +3621,7 @@ GameObject:
   - 60: {fileID: 1560508987}
   m_Layer: 9
   m_Name: Course1_33
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3697,7 +3697,7 @@ GameObject:
   - 60: {fileID: 1560945784}
   m_Layer: 9
   m_Name: Course1_22
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3887,7 +3887,7 @@ GameObject:
   - 60: {fileID: 1594834820}
   m_Layer: 9
   m_Name: Course1_25
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4032,7 +4032,7 @@ GameObject:
   - 61: {fileID: 1642781600}
   m_Layer: 9
   m_Name: Course1_10
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4150,7 +4150,7 @@ GameObject:
   - 61: {fileID: 1725934011}
   m_Layer: 9
   m_Name: Course1_1
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4218,7 +4218,7 @@ GameObject:
   - 61: {fileID: 1739802234}
   m_Layer: 9
   m_Name: Course1_18
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4286,7 +4286,7 @@ GameObject:
   - 61: {fileID: 1760897055}
   m_Layer: 9
   m_Name: Course1_0
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4454,7 +4454,7 @@ GameObject:
   - 61: {fileID: 1829806284}
   m_Layer: 9
   m_Name: Course1_16
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4572,7 +4572,7 @@ GameObject:
   - 60: {fileID: 1878787903}
   m_Layer: 9
   m_Name: Course1_28
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4750,7 +4750,7 @@ GameObject:
   - 60: {fileID: 1923018507}
   m_Layer: 9
   m_Name: Course1_13
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4826,7 +4826,7 @@ GameObject:
   - 60: {fileID: 1927294695}
   m_Layer: 9
   m_Name: Course1_39
-  m_TagString: Untagged
+  m_TagString: Course
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

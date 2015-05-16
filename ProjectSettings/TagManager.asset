@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Food
   - PowerFood
+  - Monster
+  - Packman
+  - Course
   layers:
   - Default
   - TransparentFX
