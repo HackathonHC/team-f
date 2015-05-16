@@ -28,8 +28,10 @@ public class Swip : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(target){
-			if (Input.GetMouseButtonDown(0)) Down();
-			if (Input.GetMouseButtonUp(0)) Up();
+			//if (Input.GetMouseButtonDown(0)) Down();
+			//if (Input.GetMouseButtonUp(0)) Up();
+			if(Input.GetKeyDown (KeyCode.Mouse0)) Down();
+			if(Input.GetKeyUp (KeyCode.Mouse0)) Up();
 		}
 	}
 

@@ -33,8 +33,8 @@ public class CourseSensor : MonoBehaviour {
 	void Update () {
 	
 	}
-
-  void OnTriggerEnter2D(Collider2D c) {
+	
+	void OnTriggerEnter2D(Collider2D c) {
 		if(myPosition == "body"){
 			float moveX = parent.GetComponent<Character>().moveX;
 			float moveY = parent.GetComponent<Character>().moveY;
