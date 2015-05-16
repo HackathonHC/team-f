@@ -766,7 +766,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: -3.18000007
       objectReference: {fileID: 0}
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.y
@@ -858,6 +858,10 @@ Transform:
   - {fileID: 1891919126}
   - {fileID: 211215510}
   - {fileID: 2018504806}
+  - {fileID: 1447045363}
+  - {fileID: 1920504839}
+  - {fileID: 833591492}
+  - {fileID: 1862403129}
   m_Father: {fileID: 621548126}
   m_RootOrder: 3
 --- !u!1 &363925802
@@ -1163,7 +1167,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -3.68000007
       objectReference: {fileID: 0}
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1435,6 +1439,52 @@ Transform:
   - {fileID: 358810848}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1001 &632981175
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 358810848}
+    m_Modifications:
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.77999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.49000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 132696, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_Name
+      value: PowerFood1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &659141169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1681,56 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
   m_PrefabInternal: {fileID: 762932204}
+--- !u!1001 &833591491
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 358810848}
+    m_Modifications:
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.07000017
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 132696, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_Name
+      value: PowerFood3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &833591492 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_PrefabInternal: {fileID: 833591491}
 --- !u!1 &904247939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2942,7 +3042,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: -2.18000007
       objectReference: {fileID: 0}
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3127,6 +3227,10 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300012, guid: ba0ac0844d14748faab6a714fc2d0b3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1447045363 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_PrefabInternal: {fileID: 632981175}
 --- !u!1 &1459914623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,6 +4510,56 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300030, guid: ba0ac0844d14748faab6a714fc2d0b3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &1862403128
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 358810848}
+    m_Modifications:
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.07000017
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.51999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 132696, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_Name
+      value: PowerFood4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1862403129 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_PrefabInternal: {fileID: 1862403128}
 --- !u!1 &1878787901
 GameObject:
   m_ObjectHideFlags: 0
@@ -4534,6 +4688,56 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
   m_PrefabInternal: {fileID: 1891919125}
+--- !u!1001 &1920504838
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 358810848}
+    m_Modifications:
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.77999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 132696, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+      propertyPath: m_Name
+      value: PowerFood2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1920504839 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 490762, guid: 72c70e2d1334e4662942d507a2495c28, type: 2}
+  m_PrefabInternal: {fileID: 1920504838}
 --- !u!1 &1923018505
 GameObject:
   m_ObjectHideFlags: 0
@@ -4697,7 +4901,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -2.68000007
       objectReference: {fileID: 0}
     - target: {fileID: 454016, guid: ea2a1800e2aa84e04a3771b7a105da29, type: 2}
       propertyPath: m_LocalPosition.y

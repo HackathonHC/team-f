@@ -31,13 +31,23 @@ public class Packman : Character {
 	void OnTriggerEnter2D(Collider2D c)
 	{
 		print ("Food");
-		if (c.tag == Food.Tag)
+		switch (c.tag)
 		{
+		case Food.Tag:
 			c.GetComponent<Food>().Hide();
 			if (photonView.isMine)
 			{
 				// TODO: ADD score etc...
 			}
+			break;
+		case PowerFood.Tag:
+			c.GetComponent<PowerFood>().Hide();
+			if (photonView.isMine)
+			{
+				// TODO: ADD score etc...
+			}
+			break;
 		}
+
 	}
 }
