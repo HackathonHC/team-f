@@ -36,6 +36,7 @@ public class CourseSensor : MonoBehaviour {
 
   void OnTriggerEnter2D(Collider2D c) {
 		if(myPosition == "body"){
+
 			Debug.Log("body");
 			Vector2 parentPosition = parent.transform.position;
 			Vector2 Scale = GetComponent<CircleCollider2D>().bounds.size;
@@ -47,7 +48,7 @@ public class CourseSensor : MonoBehaviour {
 				} else {
 					parentPosition.x = WallPosition.x+(WallScale.x/2)+(Scale.x/2)+(Scale.x/10);
 				}
-				transform.position = Position;
+				parent.transform.position = parentPosition;
 				parent.GetComponent<Character>().moveX = 0;
 			}
 			if(parent.GetComponent<Character>().moveY != 0){
@@ -59,6 +60,7 @@ public class CourseSensor : MonoBehaviour {
 				parent.transform.position = parentPosition;
 				parent.GetComponent<Character>().moveY = 0;
 			}
+
 		} else if(c.gameObject.name != "Body"){
 			parent.GetComponent<Character>().hitCourse(myPosition,false);
 		}
