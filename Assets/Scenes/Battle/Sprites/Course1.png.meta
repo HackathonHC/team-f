@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ba0ac0844d14748faab6a714fc2d0b3b
-timeCreated: 1431775255
+timeCreated: 1431777254
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -31,6 +31,7 @@ TextureImporter:
     21300048: Course1_24
     21300050: Course1_25
     21300052: Course1_26
+    21300054: Course1_28
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -84,7 +85,7 @@ TextureImporter:
         width: 84
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_1
       rect:
@@ -94,7 +95,7 @@ TextureImporter:
         width: 105
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_2
       rect:
@@ -104,7 +105,7 @@ TextureImporter:
         width: 30
         height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_3
       rect:
@@ -114,7 +115,7 @@ TextureImporter:
         width: 105
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_4
       rect:
@@ -124,7 +125,7 @@ TextureImporter:
         width: 84
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_5
       rect:
@@ -134,7 +135,7 @@ TextureImporter:
         width: 84
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_6
       rect:
@@ -144,7 +145,7 @@ TextureImporter:
         width: 105
         height: 191
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_7
       rect:
@@ -154,7 +155,7 @@ TextureImporter:
         width: 105
         height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_8
       rect:
@@ -164,7 +165,7 @@ TextureImporter:
         width: 87
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_9
       rect:
@@ -174,7 +175,7 @@ TextureImporter:
         width: 190
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_10
       rect:
@@ -184,7 +185,7 @@ TextureImporter:
         width: 152
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_11
       rect:
@@ -194,7 +195,7 @@ TextureImporter:
         width: 190
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_12
       rect:
@@ -204,7 +205,7 @@ TextureImporter:
         width: 152
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_13
       rect:
@@ -214,7 +215,7 @@ TextureImporter:
         width: 152
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_14
       rect:
@@ -224,7 +225,7 @@ TextureImporter:
         width: 27
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_15
       rect:
@@ -234,7 +235,7 @@ TextureImporter:
         width: 25
         height: 109
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_16
       rect:
@@ -244,7 +245,7 @@ TextureImporter:
         width: 152
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_17
       rect:
@@ -254,7 +255,7 @@ TextureImporter:
         width: 105
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_18
       rect:
@@ -264,7 +265,7 @@ TextureImporter:
         width: 190
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_19
       rect:
@@ -274,7 +275,7 @@ TextureImporter:
         width: 105
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_20
       rect:
@@ -284,7 +285,7 @@ TextureImporter:
         width: 58
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_21
       rect:
@@ -294,7 +295,7 @@ TextureImporter:
         width: 86
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_22
       rect:
@@ -304,7 +305,7 @@ TextureImporter:
         width: 190
         height: 101
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_23
       rect:
@@ -314,7 +315,7 @@ TextureImporter:
         width: 84
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_24
       rect:
@@ -324,7 +325,7 @@ TextureImporter:
         width: 60
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_25
       rect:
@@ -334,7 +335,7 @@ TextureImporter:
         width: 245
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Course1_26
       rect:
@@ -344,7 +345,17 @@ TextureImporter:
         width: 245
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Course1_28
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 860
+        width: 781
+        height: 528
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
