@@ -27,9 +27,7 @@ public class Monster : Character {
 	
 	// Update is called once per frame
 	void Update () {
-		if (photonView.isMine) {
-			Move();
-		}
+
 	}
 
 	void Show()

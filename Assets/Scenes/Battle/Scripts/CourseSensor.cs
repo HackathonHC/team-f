@@ -39,26 +39,26 @@ public class CourseSensor : MonoBehaviour {
 		{
 		case "Course":
 			if(myPosition == "body"){
-				float moveX = parent.GetComponent<Character>().moveX;
-				float moveY = parent.GetComponent<Character>().moveY;
+				float moveX = parent.GetComponent<Dammy>().moveX;
+				float moveY = parent.GetComponent<Dammy>().moveY;
 				if(moveX != 0){
 					if(moveX > 0){
-						if(!parent.GetComponent<Character>().CanRight){
-							parent.GetComponent<Character>().moveX = 0;
+						if(!parent.GetComponent<Dammy>().CanRight){
+							parent.GetComponent<Dammy>().moveX = 0;
 						}
 					} else {
-						if(!parent.GetComponent<Character>().CanLeft){
-							parent.GetComponent<Character>().moveX = 0;
+						if(!parent.GetComponent<Dammy>().CanLeft){
+							parent.GetComponent<Dammy>().moveX = 0;
 						}
 					}
 				} else if(moveY != 0){
 					if(moveY > 0){
-						if(!parent.GetComponent<Character>().CanUp){
-							parent.GetComponent<Character>().moveY = 0;
+						if(!parent.GetComponent<Dammy>().CanUp){
+							parent.GetComponent<Dammy>().moveY = 0;
 						}
 					} else {
-						if(!parent.GetComponent<Character>().CanDown){
-							parent.GetComponent<Character>().moveY = 0;
+						if(!parent.GetComponent<Dammy>().CanDown){
+							parent.GetComponent<Dammy>().moveY = 0;
 						}
 					}
 				}
@@ -90,7 +90,7 @@ public class CourseSensor : MonoBehaviour {
 				}
 				*/
 			} else if(c.gameObject.name != "Body"){
-				parent.GetComponent<Character>().hitCourse(myPosition,false);
+				parent.GetComponent<Dammy>().hitCourse(myPosition,false);
 			}
 			break;
 		default:
@@ -105,7 +105,7 @@ public class CourseSensor : MonoBehaviour {
 		switch (c.tag)
 		{
 		case "Course":
-			parent.GetComponent<Character>().hitCourse(myPosition,true);
+			parent.GetComponent<Dammy>().hitCourse(myPosition,true);
 			break;
 		}
   } 

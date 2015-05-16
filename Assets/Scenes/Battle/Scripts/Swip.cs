@@ -37,11 +37,13 @@ public class Swip : MonoBehaviour {
 
 	public void setTarget(GameObject go) {
 		Debug.Log(go);
-		target = go;
+		target = GameObject.Find("Dammy");
+		target.GetComponent<Dammy>().setTarget(go);
 	}
 
 	void Down() {
 		touchPosition = Input.mousePosition;
+		//touchPosition = Input.GetTouch(0).position;
 		
 		touchTime = Time.time;
 		isTouch = true;
@@ -51,6 +53,7 @@ public class Swip : MonoBehaviour {
 		if (!isTouch) return;
 		
 		Vector3 touchEndPosition = Input.mousePosition;
+		//Vector3 touchEndPosition = Input.GetTouch(0).position;
 		
 		float deltaTime = Time.time - touchTime;
 		float distance = Vector3.Distance(touchPosition, touchEndPosition);
