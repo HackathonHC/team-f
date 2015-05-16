@@ -20,6 +20,23 @@ public class Character : Photon.MonoBehaviour {
 		set { this.move_y = value; }
 		get { return this.move_y; }
 	}
+	public bool CanUp
+	{
+		get { return this.canUp; }
+	}
+	public bool CanDown
+	{
+		get { return this.canDown; }
+	}
+	public bool CanLeft
+	{
+		get { return this.canLeft; }
+	}
+	public bool CanRight
+	{
+		get { return this.canRight; }
+	}
+
 	
 	// Use this for initialization
 	void Start () {
@@ -76,22 +93,20 @@ public class Character : Photon.MonoBehaviour {
 
 	public void hitCourse(string pos, bool hit){
 		if (photonView.isMine) {
-		Debug.Log(pos);
-		Debug.Log(hit);
-		}
-		switch(pos){
-		case "up":
-			canUp = hit;
-			break;
-		case "down":
-			canDown = hit;
-			break;
-		case "left":
-			canLeft = hit;
-			break;
-		case "right":
-			canRight = hit;
-			break;
+			switch(pos){
+			case "up":
+				canUp = hit;
+				break;
+			case "down":
+				canDown = hit;
+				break;
+			case "left":
+				canLeft = hit;
+				break;
+			case "right":
+				canRight = hit;
+				break;
+			}
 		}
 	}
 }
