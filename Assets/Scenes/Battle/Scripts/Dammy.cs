@@ -73,24 +73,24 @@ public class Dammy : MonoBehaviour {
 	}
 	
 	void OnDown() {
-			if(canDown){
-				move_x = 0;
+		if(canDown){
+			move_x = 0;
 			move_y = -1.0f;
-			}
+		}
 	}
 	
 	void OnLeft() {
-			if(canLeft){
+		if(canLeft){
 			move_x = -1.0f;
-				move_y = 0;
-			}
+			move_y = 0;
+		}
 	}
 	
 	void OnRight() {
-			if(canRight){
+		if(canRight){
 			move_x = 1.0f;
-				move_y = 0;
-			}
+			move_y = 0;
+		}
 	}
 	
 	public void hitCourse(string pos, bool hit){
