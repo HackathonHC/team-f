@@ -70,7 +70,7 @@ public class Battle : MonoBehaviour {
 
 	void JoinLobby()
 	{
-		PhotonNetwork.ConnectUsingSettings("3.0");
+		PhotonNetwork.ConnectUsingSettings("4.0");
 		PhotonNetwork.sendRate = 60;
 		PhotonNetwork.sendRateOnSerialize = 60;
 	}
@@ -217,9 +217,10 @@ public class Battle : MonoBehaviour {
 			{
 				//nop
 			}
-			else if (_foodCount > MaxFood)
+			else if (_foodCount > MaxFood && _lightItem == null)
 			{
 				_lightItem = PhotonNetwork.Instantiate("Light", LightPosition, Quaternion.identity, 0).GetComponent<LightItem>();
+				_foodCount = 0;
 			}
 			else
 			{
