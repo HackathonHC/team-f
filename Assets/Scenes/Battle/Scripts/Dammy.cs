@@ -60,35 +60,35 @@ public class Dammy : MonoBehaviour {
 	
 	void Move() {
 		Vector2 Position = transform.position;
-		Position.x += move_x;
-		Position.y += move_y;
+		Position.x += move_x*Time.deltaTime;
+		Position.y += move_y*Time.deltaTime;
 		transform.position = Position;
 	}
 	
 	void OnUp() {
 			if(canUp){
 				move_x = 0;
-				move_y = 0.1f;
+				move_y = 1.0f;
 			}
 	}
 	
 	void OnDown() {
 			if(canDown){
 				move_x = 0;
-				move_y = -0.1f;
+			move_y = -1.0f;
 			}
 	}
 	
 	void OnLeft() {
 			if(canLeft){
-				move_x = -0.1f;
+			move_x = -1.0f;
 				move_y = 0;
 			}
 	}
 	
 	void OnRight() {
 			if(canRight){
-				move_x = 0.1f;
+			move_x = 1.0f;
 				move_y = 0;
 			}
 	}
