@@ -2,20 +2,20 @@
 using System.Collections;
 
 public class Packman : Character {
-	private SpriteRenderer _renderer;
-
 	public int id;
 	public float powerTime = 0;
 	public float IntervalWhenAte = 10;
-
 	public const string Tag = "Packman";
+
+	private CharacterAnimator _animator;
 
 	void Awake()
 	{
 		photonView.observed = this;
 		id = PhotonNetwork.playerList.Length - 1;
-		_renderer = GetComponent<SpriteRenderer>();
-		_renderer.sprite = Resources.Load<Sprite>(GetSpriteName());
+		GameObject obj = Instantiate<GameObject>(Resources.Load<GameObject>(GetPrefabName()));
+		obj.transform.SetParent(transform, false);
+		_animator = GetComponent<CharacterAnimator>();
 	}
 
 	// Use this for initialization
@@ -63,6 +63,12 @@ public class Packman : Character {
 		return string.Format("Packman{0}", id);
 	}
 
+	string GetPrefabName()
+	{
+		return string.Format("Packman{0}", 1);
+		//return string.Format("Packman{0}", id);
+	}
+
 	void OnTriggerEnter2D(Collider2D c)
 	{
 		switch (c.tag)
@@ -90,7 +96,7 @@ public class Packman : Character {
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
-		print ("OnPhotonSerializeView");
+//		print ("OnPhotonSerializeView");
 		if (stream.isWriting) {
 			//データの送信
 			stream.SendNext(powerTime);
