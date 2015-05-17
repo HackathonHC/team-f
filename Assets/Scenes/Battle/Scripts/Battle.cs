@@ -42,6 +42,7 @@ public class Battle : MonoBehaviour {
 	private LightItem _lightItem;
 
 	private GameObject _startButton;
+	private GameObject _exitButton;
 	private GameObject _waitingLabel;
 
 	public const float ShowInterval = 10f;
@@ -62,7 +63,9 @@ public class Battle : MonoBehaviour {
 		Transform canvas = transform.FindChild("Canvas");
 		_waitingLabel = canvas.FindChild("WaitingLabel").gameObject;
 		_startButton = canvas.FindChild("StartButton").gameObject;
+		_exitButton =  canvas.FindChild("ExitButton").gameObject;
 		_startButton.SetActive(false);
+		_exitButton.SetActive(false);
 	}
 
 	void Start () 
