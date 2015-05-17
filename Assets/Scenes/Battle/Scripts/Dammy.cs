@@ -11,6 +11,7 @@ public class Dammy : MonoBehaviour {
 	protected bool canRight = true;
 	protected float move_x = 0f;
 	protected float move_y = 0f;
+	protected string Tag;
 	
 	public float moveX
 	{
@@ -38,6 +39,11 @@ public class Dammy : MonoBehaviour {
 	{
 		get { return this.canRight; }
 	}
+
+	public string tag
+	{
+		get { return this.Tag; }
+	}
 	
 	
 	// Use this for initialization
@@ -55,6 +61,7 @@ public class Dammy : MonoBehaviour {
 
 	public void setTarget(GameObject go) {
 		transform.position = go.transform.position;
+		Tag = go.tag;
 		target = go;
 	}
 	

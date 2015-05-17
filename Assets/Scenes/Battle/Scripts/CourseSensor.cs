@@ -7,10 +7,12 @@ public class CourseSensor : MonoBehaviour {
 	private string myPosition;
 	private Vector2 Position;
 	private GameObject hitObject;
+	private Dammy dammy;
 
 	// Use this for initialization
 	void Start () {
 		parent = transform.parent.gameObject;
+		dammy = parent.GetComponent<Dammy>();
 		Position = transform.localPosition;
 		if(Position.x != 0){
 			if(Position.x > 0){
@@ -39,26 +41,26 @@ public class CourseSensor : MonoBehaviour {
 		{
 		case "Course":
 			if(myPosition == "body"){
-				float moveX = parent.GetComponent<Dammy>().moveX;
-				float moveY = parent.GetComponent<Dammy>().moveY;
+				float moveX = dammy.moveX;
+				float moveY = dammy.moveY;
 				if(moveX != 0){
 					if(moveX > 0){
-						if(!parent.GetComponent<Dammy>().CanRight){
-							parent.GetComponent<Dammy>().moveX = 0;
+						if(!dammy.CanRight){
+							dammy.moveX = 0;
 						}
 					} else {
-						if(!parent.GetComponent<Dammy>().CanLeft){
-							parent.GetComponent<Dammy>().moveX = 0;
+						if(!dammy.CanLeft){
+							dammy.moveX = 0;
 						}
 					}
 				} else if(moveY != 0){
 					if(moveY > 0){
-						if(!parent.GetComponent<Dammy>().CanUp){
-							parent.GetComponent<Dammy>().moveY = 0;
+						if(!dammy.CanUp){
+							dammy.moveY = 0;
 						}
 					} else {
-						if(!parent.GetComponent<Dammy>().CanDown){
-							parent.GetComponent<Dammy>().moveY = 0;
+						if(!dammy.CanDown){
+							dammy.moveY = 0;
 						}
 					}
 				}
@@ -90,11 +92,11 @@ public class CourseSensor : MonoBehaviour {
 				}
 				*/
 			} else if(c.gameObject.name != "Body"){
-				parent.GetComponent<Dammy>().hitCourse(myPosition,false);
+				dammy.hitCourse(myPosition,false);
 			}
 			break;
 		default:
-			if (tag == Monster.Tag && c.tag == Packman.Tag)
+			if (dammy.tag == Monster.Tag && c.tag == Packman.Tag)
 			{
 				Battle.instance.Hit(c.GetComponentInParent<Packman>());
 			}
@@ -105,7 +107,7 @@ public class CourseSensor : MonoBehaviour {
 		switch (c.tag)
 		{
 		case "Course":
-			parent.GetComponent<Dammy>().hitCourse(myPosition,true);
+			dammy.hitCourse(myPosition,true);
 			break;
 		}
   } 
