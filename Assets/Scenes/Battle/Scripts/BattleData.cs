@@ -38,11 +38,12 @@ public class BattleData : Photon.MonoBehaviour {
 		if (stream.isWriting) {
 			//データの送信
 			stream.SendNext(_data.mode);
+			stream.SendNext(_data.id);
 		} else {
 			//データの受信
 			_data.mode = (Battle.Mode)stream.ReceiveNext();
+			_data.id = (int)stream.ReceiveNext();
 		}
-
 	}
 
 	public void SendState(State state, int id=-1)

@@ -28,6 +28,7 @@ public class Battle : MonoBehaviour {
 		{
 			return playerType.ToString();
 		}
+		public int id;
 	}
 
 	public Data data { get; set; }
@@ -96,6 +97,7 @@ public class Battle : MonoBehaviour {
 		if (PhotonNetwork.isMasterClient)
 		{
 			data.playerType = PlayerType.Monster;
+			data.id = -1;
 			_startButton.SetActive(true);
 			startPosition = MonsterPositions[Random.Range(0, MonsterPositions.Length)];
 			battleData = PhotonNetwork.Instantiate("BattleData", Vector3.zero, Quaternion.identity, 0).GetComponent<BattleData>();
@@ -105,11 +107,12 @@ public class Battle : MonoBehaviour {
 		else
 		{
 			data.playerType = PlayerType.Packman;
+			data.id = PhotonNetwork.playerList.Length - 1;
 			startPosition = PackmanPosition;
 			battleData = PhotonNetwork.Instantiate("BattleData", Vector3.zero, Quaternion.identity, 0).GetComponent<BattleData>();
 			GameObject g = PhotonNetwork.Instantiate(data.GetResourceName(), startPosition, Quaternion.identity, 0);
 			Packman packman = g.GetComponent<Packman>();
-			packman.id = PhotonNetwork.playerList.Length - 1;
+			packman.id = data.id;
 			character = (Character)packman;
 		}
 	}
