@@ -53,6 +53,10 @@ public class Dammy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!Battle.instance.canMove)
+		{
+			return;
+		}
 		Move();
 		if(target){
 			target.transform.position = transform.position;

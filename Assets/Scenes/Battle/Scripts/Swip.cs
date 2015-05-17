@@ -45,7 +45,6 @@ public class Swip : MonoBehaviour {
 	}
 
 	public void setTarget(GameObject go) {
-		Debug.Log(go);
 		target = GameObject.Find("Dammy");
 		target.GetComponent<Dammy>().setTarget(go);
 	}

@@ -49,6 +49,8 @@ public class Battle : MonoBehaviour {
 
 	private HashSet<int> _powerPackmans = new HashSet<int>();
 
+	private HashSet<Packman> _grabbedPackmans = new HashSet<Packman>();
+
 	void Awake() 
 	{
 		instance = this;
@@ -166,13 +168,22 @@ public class Battle : MonoBehaviour {
 	        }
 			else
 			{
-				battleData.SendState(BattleData.State.Grabbed, packman.id);
+				if (!_grabbedPackmans.Contains(packman))
+				{
+					_grabbedPackmans.Add(packman);
+					battleData.SendState(BattleData.State.Grabbed, packman.id);
+				}
 			}
 		}
 	}
 
 	public void Grab(int id)
 	{
+		if (PhotonNetwork.isMasterClient)
+		{
+			return;
+		}
+
 		Packman packman = character as Packman;
 		if (packman.id == id)
 		{

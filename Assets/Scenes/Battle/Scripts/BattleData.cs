@@ -13,7 +13,8 @@ public class BattleData : Photon.MonoBehaviour {
 		Hide,
 	}
 
-	private Battle battle;
+	public Battle battle { get; set; }
+	private Battle.Data _data = new Battle.Data();
 
 	void Awake()
 	{
@@ -23,13 +24,25 @@ public class BattleData : Photon.MonoBehaviour {
 
 	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
+		Battle.Data data;
+
+		if (photonView.isMine)
+		{
+			data = battle.data;
+		}
+		else
+		{
+			data = _data;
+		}
+
 		if (stream.isWriting) {
 			//データの送信
-			stream.SendNext(battle.data.mode);
+			stream.SendNext(_data.mode);
 		} else {
 			//データの受信
-			battle.data.mode = (Battle.Mode)stream.ReceiveNext();
+			_data.mode = (Battle.Mode)stream.ReceiveNext();
 		}
+
 	}
 
 	public void SendState(State state, int id=-1)
@@ -55,7 +68,7 @@ public class BattleData : Photon.MonoBehaviour {
 	[RPC] 
 	void ReceiveState(int nState, int id)
 	{
-		print ("ReceiveState");
+		print ("ReceiveState:" + nState + ":" + id);
 		State state = (State)nState;
 		switch (state)
 		{
