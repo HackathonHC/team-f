@@ -30,12 +30,12 @@ public class Monster : Character {
 
 	}
 
-	void Show()
+	public void Show()
 	{
 		_renderer.enabled = true;
 	}
 
-	void Hide()
+	public void Hide()
 	{
 		_renderer.enabled = false;
     }

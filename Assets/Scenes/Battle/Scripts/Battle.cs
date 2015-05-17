@@ -18,11 +18,12 @@ public class Battle : MonoBehaviour {
 		Grabbed,		// 食べられた
 	}
 
-	public class Data
+	public const int MaxFood = 2;
+    
+    public class Data
 	{
 		public PlayerType playerType;
 		public Mode mode;
-
 		public string GetResourceName()
 		{
 			return playerType.ToString();
@@ -37,8 +38,14 @@ public class Battle : MonoBehaviour {
 
 	public Character character { get; private set; }
 
+	private LightItem _lightItem;
+
 	private GameObject _startButton;
 	private GameObject _waitingLabel;
+
+	public const float ShowInterval = 10f;
+	private float _showTime = 0;
+	private int _foodCount = 0;
 
 	private HashSet<int> _powerPackmans = new HashSet<int>();
 
@@ -76,8 +83,10 @@ public class Battle : MonoBehaviour {
 		PhotonNetwork.JoinOrCreateRoom("team-f", roomOptions, TypedLobby.Default);
 	}
 
-	readonly static Vector3[] MonsterPositions = new Vector3[] { new Vector3(3.4f, -3.9f, 0), new Vector3(-3.4f, -3.9f, 0), new Vector3(-3.4f, 3.6f, 0), new Vector3(3.4f, 3.6f, 0) };
+	readonly static Vector3[] MonsterPositions = new Vector3[] { /*new Vector3(3.4f, -3.9f, 0), */new Vector3(-3.4f, -3.9f, 0), new Vector3(-3.4f, 3.6f, 0), new Vector3(3.4f, 3.6f, 0) };
 	readonly static Vector3 PackmanPosition = new Vector3(0, 0.95f, 0);
+	//readonly static Vector3 LightPosition = new Vector3(0, -0.85f, 0);
+	readonly static Vector3 LightPosition = new Vector3(3.4f, -3.9f, 0);
 	void OnJoinedRoom()
 	{
 		Vector3 startPosition;
@@ -105,6 +114,11 @@ public class Battle : MonoBehaviour {
 		if (!canMove)
 		{
 			return;
+		}
+
+		if (_showTime > 0 && Time.time - _showTime > ShowInterval  && PhotonNetwork.isMasterClient)
+		{
+			Hide();
 		}
 
 		if (Input.GetKey(KeyCode.RightArrow))
@@ -167,5 +181,61 @@ public class Battle : MonoBehaviour {
 		}
 	}
 
-	public bool canMove { get { return data.mode == Mode.Play; } }
+	public void EatFood(int id)
+	{
+		battleData.SendState(BattleData.State.EatFood, id);
+	}
+
+	public void TakeLight()
+	{
+		battleData.SendState(BattleData.State.Show);
+	}
+
+	public void AddFoodCount()
+	{
+		if (PhotonNetwork.isMasterClient)
+		{
+			if (_showTime > 0)
+			{
+				//nop
+			}
+			else if (_foodCount > MaxFood)
+			{
+				_lightItem = PhotonNetwork.Instantiate("Light", LightPosition, Quaternion.identity, 0).GetComponent<LightItem>();
+			}
+			else
+			{
+				_foodCount++;
+			}
+		}
+	}
+
+	public void Show()
+	{
+		if (PhotonNetwork.isMasterClient)
+		{
+			_showTime = Time.time;
+			PhotonNetwork.Destroy(_lightItem.gameObject);
+			_lightItem = null;
+		}
+		else
+		{
+			Monster.instance.Show();
+		}
+	}
+
+	public void Hide()
+	{
+		if (PhotonNetwork.isMasterClient)
+		{
+			_showTime = 0;
+			battleData.SendState(BattleData.State.Hide);
+		}
+		else
+		{
+			Monster.instance.Hide();
+		}
+	}
+    
+    public bool canMove { get { return data.mode == Mode.Play; } }
 }

@@ -39,11 +39,12 @@ public class Packman : Character {
 
 		if (powerTime == 0)
 		{
-			transform.localScale = Vector3.one;
+			// TODO:
+			// transform.localScale = Vector3.one;
 		}
 		else
 		{
-			transform.localScale = 1.5f * Vector3.one;
+			// transform.localScale = 1.5f * Vector3.one;
 		}
 	}
 
@@ -71,6 +72,7 @@ public class Packman : Character {
 			if (photonView.isMine)
 			{
 				// TODO: ADD score etc...
+				Battle.instance.EatFood(id);
 			}
 			break;
 		case PowerFood.Tag:
@@ -79,6 +81,9 @@ public class Packman : Character {
 			{
 				Strengthen();
 			}
+			break;
+		case LightItem.Tag:
+			Battle.instance.TakeLight();
 			break;
 		}
 	}

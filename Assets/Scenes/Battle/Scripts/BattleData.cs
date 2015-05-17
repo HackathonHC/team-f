@@ -8,6 +8,9 @@ public class BattleData : Photon.MonoBehaviour {
 		Play,
 		EatPowerFood,
 		Grabbed,
+		EatFood,
+		Show,
+		Hide,
 	}
 
 	private Battle battle;
@@ -22,10 +25,10 @@ public class BattleData : Photon.MonoBehaviour {
 	{
 		if (stream.isWriting) {
 			//データの送信
-//			stream.SendNext(battle.data.mode);
+			stream.SendNext(battle.data.mode);
 		} else {
 			//データの受信
-//			battle.data.mode = (Battle.Mode)stream.ReceiveNext();
+			battle.data.mode = (Battle.Mode)stream.ReceiveNext();
 		}
 	}
 
@@ -36,7 +39,11 @@ public class BattleData : Photon.MonoBehaviour {
 		switch (state)
 		{
 		case State.EatPowerFood:
+		case State.EatFood:
 			targets = PhotonTargets.MasterClient;
+			break;
+		case State.Show:
+			targets = PhotonTargets.All;
 			break;
 		default:
 			targets = PhotonTargets.Others;
@@ -58,8 +65,17 @@ public class BattleData : Photon.MonoBehaviour {
 		case State.EatPowerFood:
 			battle.Weaken(id);
 			break;	
+		case State.EatFood:
+			battle.AddFoodCount();
+			break;
 		case State.Grabbed:
 			battle.Grab(id);
+			break;
+		case State.Show:
+			battle.Show();
+			break;
+		case State.Hide:
+			battle.Hide();
 			break;
         }
     }
