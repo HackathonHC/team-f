@@ -65,8 +65,7 @@ public class Packman : Character {
 
 	string GetPrefabName()
 	{
-		return string.Format("Packman{0}", 1);
-		//return string.Format("Packman{0}", id);
+		return string.Format("Packman{0}", id);
 	}
 
 	void OnTriggerEnter2D(Collider2D c)
