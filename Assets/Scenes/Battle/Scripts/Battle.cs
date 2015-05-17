@@ -52,6 +52,8 @@ public class Battle : MonoBehaviour {
 
 	private HashSet<Packman> _grabbedPackmans = new HashSet<Packman>();
 
+	[SerializeField] HeaderIcon _headerIcon;
+
 	void Awake() 
 	{
 		instance = this;
@@ -70,7 +72,7 @@ public class Battle : MonoBehaviour {
 
 	void JoinLobby()
 	{
-		PhotonNetwork.ConnectUsingSettings("5.0");
+		PhotonNetwork.ConnectUsingSettings("6.0");
 		PhotonNetwork.sendRate = 60;
 		PhotonNetwork.sendRateOnSerialize = 60;
 	}
@@ -103,6 +105,7 @@ public class Battle : MonoBehaviour {
 			battleData = PhotonNetwork.Instantiate("BattleData", Vector3.zero, Quaternion.identity, 0).GetComponent<BattleData>();
 			GameObject g = PhotonNetwork.Instantiate(data.GetResourceName(), startPosition, Quaternion.identity, 0);
 			character = g.GetComponent<Character>();
+			_headerIcon.Show(0);
 		}
 		else
 		{
@@ -114,6 +117,7 @@ public class Battle : MonoBehaviour {
 			Packman packman = g.GetComponent<Packman>();
 			packman.id = data.id;
 			character = (Character)packman;
+			_headerIcon.Show(packman.id);
 		}
 	}
 
