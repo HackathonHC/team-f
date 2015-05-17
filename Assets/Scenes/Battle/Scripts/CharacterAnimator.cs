@@ -38,7 +38,6 @@ public class CharacterAnimator : MonoBehaviour {
 	void Update() {
 		if (_animator != null && isWalkAnimation)
 		{
-			print (transform.position);
 			Direction nextDir = dir;
 			if (transform.position.x > _prevPosition.x)
 			{
@@ -57,8 +56,7 @@ public class CharacterAnimator : MonoBehaviour {
 				nextDir = Direction.Front;
 			}
 			
-			print (nextDir);
-			
+
 			if (nextDir != dir && nextDir != Direction.Wait)
 			{
 				_animator.Play(nextDir.ToString());

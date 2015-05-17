@@ -5,14 +5,15 @@ public class Monster : Character {
 
 	public static Monster instance { get; private set; }
 
-	private SpriteRenderer _renderer;
+	private CharacterAnimator _animator;
+
 
 	public const string Tag = "Monster";
 
 	void Awake()
 	{
 		instance = this;
-		_renderer = GetComponent<SpriteRenderer>();
+		_animator = GetComponentInChildren<CharacterAnimator>();
 	}
 
 	// Use this for initialization
@@ -32,11 +33,15 @@ public class Monster : Character {
 
 	public void Show()
 	{
-		_renderer.enabled = true;
+		print ("Show monster");
+		_animator.isWalkAnimation = true;
+		_animator.Play("Front");
 	}
 
 	public void Hide()
 	{
-		_renderer.enabled = false;
-    }
+		print ("Hide monster");
+		_animator.isWalkAnimation = false;
+		_animator.Play("Hide");
+	}
 }
