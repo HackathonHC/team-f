@@ -6,6 +6,7 @@ public class MonsterSensor : MonoBehaviour {
 	GameObject BK;
 	Packman parent;
 	bool mine;
+	int cnt = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -22,10 +23,18 @@ public class MonsterSensor : MonoBehaviour {
 			if(Battle.instance.data.mode == Battle.Mode.Play){
 				if(getMine()){
 					getBK().GetComponent<SpriteRenderer>().color = Color.red;
+					if(cnt > 100){
+                        cnt = 0;
+					} 
+					if(cnt == 0){
+						Handheld.Vibrate();
+					}
+					cnt++;
 				}
 			} else {
 				if(getMine()){
 					getBK().GetComponent<SpriteRenderer>().color = Color.white;
+					cnt = 0;
 				}
 			}
 		}
@@ -35,6 +44,7 @@ public class MonsterSensor : MonoBehaviour {
 		if(c.gameObject.name == "SensorTriger"){
 			if(getMine()){
 				getBK().GetComponent<SpriteRenderer>().color = Color.white;
+				cnt = 0;
 			}
 		}
 	} 
