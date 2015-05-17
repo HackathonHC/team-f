@@ -83,10 +83,10 @@ public class Battle : MonoBehaviour {
 		PhotonNetwork.JoinOrCreateRoom("team-f", roomOptions, TypedLobby.Default);
 	}
 
-	readonly static Vector3[] MonsterPositions = new Vector3[] { /*new Vector3(3.4f, -3.9f, 0), */new Vector3(-3.4f, -3.9f, 0), new Vector3(-3.4f, 3.6f, 0), new Vector3(3.4f, 3.6f, 0) };
+	readonly static Vector3[] MonsterPositions = new Vector3[] { new Vector3(3.4f, -3.9f, 0), new Vector3(-3.4f, -3.9f, 0), new Vector3(-3.4f, 3.6f, 0), new Vector3(3.4f, 3.6f, 0) };
 	readonly static Vector3 PackmanPosition = new Vector3(0, 0.95f, 0);
-	//readonly static Vector3 LightPosition = new Vector3(0, -0.85f, 0);
-	readonly static Vector3 LightPosition = new Vector3(3.4f, -3.9f, 0);
+	readonly static Vector3 LightPosition = new Vector3(0, -0.85f, 0);
+	//readonly static Vector3 LightPosition = new Vector3(3.4f, -3.9f, 0);
 	void OnJoinedRoom()
 	{
 		Vector3 startPosition;
