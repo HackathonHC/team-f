@@ -70,7 +70,7 @@ public class Battle : MonoBehaviour {
 
 	void JoinLobby()
 	{
-		PhotonNetwork.ConnectUsingSettings("4.0");
+		PhotonNetwork.ConnectUsingSettings("5.0");
 		PhotonNetwork.sendRate = 60;
 		PhotonNetwork.sendRateOnSerialize = 60;
 	}
