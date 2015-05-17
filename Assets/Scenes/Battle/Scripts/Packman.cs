@@ -2,7 +2,23 @@
 using System.Collections;
 
 public class Packman : Character {
-	public int id;
+	public int _id = -1;
+
+	public int id
+	{
+		get { return _id; }
+		set {
+			if (value == -1)
+			{
+				return;
+			}
+			_id = value;
+			GameObject obj = Instantiate<GameObject>(Resources.Load<GameObject>(GetPrefabName()));
+			obj.transform.SetParent(transform, false);
+			_animator = GetComponent<CharacterAnimator>();
+		}
+	}
+
 	public float powerTime = 0;
 	public float IntervalWhenAte = 10;
 	public const string Tag = "Packman";
@@ -12,10 +28,6 @@ public class Packman : Character {
 	void Awake()
 	{
 		photonView.observed = this;
-		id = PhotonNetwork.playerList.Length - 1;
-		GameObject obj = Instantiate<GameObject>(Resources.Load<GameObject>(GetPrefabName()));
-		obj.transform.SetParent(transform, false);
-		_animator = GetComponent<CharacterAnimator>();
 	}
 
 	// Use this for initialization
@@ -24,6 +36,8 @@ public class Packman : Character {
 			GameObject.Find("Swip").GetComponent<Swip>().setTarget(this.gameObject);
 		}
 	}
+
+
 
 	public bool isPower { get { return powerTime > 0 && Time.time - powerTime < IntervalWhenAte; } } 
 	
@@ -99,9 +113,11 @@ public class Packman : Character {
 		if (stream.isWriting) {
 			//データの送信
 			stream.SendNext(powerTime);
+			stream.SendNext(id);
 		} else {
 			//データの受信
 			powerTime = (float)stream.ReceiveNext();
+			id = (int)stream.ReceiveNext();
 		}
 	}
 }

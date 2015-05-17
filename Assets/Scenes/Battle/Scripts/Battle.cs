@@ -98,16 +98,20 @@ public class Battle : MonoBehaviour {
 			data.playerType = PlayerType.Monster;
 			_startButton.SetActive(true);
 			startPosition = MonsterPositions[Random.Range(0, MonsterPositions.Length)];
+			battleData = PhotonNetwork.Instantiate("BattleData", Vector3.zero, Quaternion.identity, 0).GetComponent<BattleData>();
+			GameObject g = PhotonNetwork.Instantiate(data.GetResourceName(), startPosition, Quaternion.identity, 0);
+			character = g.GetComponent<Character>();
 		}
 		else
 		{
 			data.playerType = PlayerType.Packman;
 			startPosition = PackmanPosition;
+			battleData = PhotonNetwork.Instantiate("BattleData", Vector3.zero, Quaternion.identity, 0).GetComponent<BattleData>();
+			GameObject g = PhotonNetwork.Instantiate(data.GetResourceName(), startPosition, Quaternion.identity, 0);
+			Packman packman = g.GetComponent<Packman>();
+			packman.id = PhotonNetwork.playerList.Length - 1;
+			character = (Character)packman;
 		}
-
-		battleData = PhotonNetwork.Instantiate("BattleData", Vector3.zero, Quaternion.identity, 0).GetComponent<BattleData>();
-		GameObject g = PhotonNetwork.Instantiate(data.GetResourceName(), startPosition, Quaternion.identity, 0);
-		character = g.GetComponent<Character>();
 	}
 
 	const float Speed = 1.25f;
